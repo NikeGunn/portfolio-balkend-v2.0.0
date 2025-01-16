@@ -20,6 +20,10 @@ app.use(express.json());
 // API routes
 app.use('/api/projects', projectRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Hurray, API is running...');
+});
+
 // Custom error handler
 app.use(errorHandler);
 
